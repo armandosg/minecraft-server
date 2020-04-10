@@ -1,5 +1,15 @@
 version: '3'
 services:
+  minecraft-server:
+    container_name: minecraft-server
+    build:
+      context: .
+      dockerfile: .docker/minecraft/Dockerfile
+    image: minecraft-server
+    ports:
+      - 25565:25565
+    volumes:
+      - storage/world:/srv/minecraft/world
   app:
     container_name: minecraft-server-app
     build:
