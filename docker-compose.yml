@@ -1,0 +1,12 @@
+version: '3'
+services:
+  app:
+    container_name: minecraft-server-app
+    build:
+      context: .
+      dockerfile: .docker/php/Dockerfile
+    image: minecraft-server-app
+    ports:
+      - 8000:80
+    volumes:
+      - .:/srv/app
