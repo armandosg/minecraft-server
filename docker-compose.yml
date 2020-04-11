@@ -9,7 +9,7 @@ services:
     ports:
       - 25565:25565
     volumes:
-      - storage/world:/srv/minecraft/world
+      - ./storage/world:/srv/minecraft/world
   app:
     container_name: minecraft-server-app
     build:
